@@ -7,10 +7,11 @@ This is version 1.0.0.
 
 --Prerequisite--
 Python v2.7.6. 
-PWM.xlsx must be stored on the same directory of the python script
+xlrd package (https://pypi.python.org/pypi/xlrd)
 
 --Installation--
 The tool is built using python; there is no need for installation.
+PWM.xlsx must be stored on the same directory of the python script
 
 --Running HGA Tool--
 Run the command: 
