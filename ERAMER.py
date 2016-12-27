@@ -8,7 +8,11 @@ import xlrd
 
 All_weights = defaultdict(float)
 
-peptide_file =  "test.fasta" # sys.argv[1] 
+if len(sys.argv) != 2:
+    print "Please provide a fasta file"
+    exit()
+
+peptide_file =  sys.argv[1]
 
 
 def check_has_lower(s):
@@ -59,7 +63,7 @@ d = 0
 peptide_id = ""
 peptide_seq = ""
 
-print "Peptide ID\tPosition of the N-terminus of precursor \tExpected transported precursor (lengths 9-16)\tTrimming score\n--------------------------------------------------------------------------------------------------------"
+print "Peptide ID\tPosition of the N-terminus of precursor \tExpected transported precursor (lengths 9-16)\tTrimming score\n--------------------------------------------------------------------------------------------------------------------------------"
 for line in fileinput.input(peptide_file):
     tmp =  line.strip()
     #print tmp
@@ -73,7 +77,7 @@ for line in fileinput.input(peptide_file):
                 mer = peptide_seq[i:i+prec_length]
                 if len(mer)  == prec_length:
                     print peptide_id, "\t", i + 1, "\t", prec_length, "\t", mer, (16 - prec_length) * " ", "\t", compute_specificty(mer)
-                
+
         peptide_id = tmp[1:]
         peptide_seq = ""
 
