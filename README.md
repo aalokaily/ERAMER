@@ -13,28 +13,31 @@ xlrd package (https://pypi.python.org/pypi/xlrd)
 The tool is built using python; there is no need for installation.
 PWM.xlsx must be stored in the same directory of the python script. 
 
-Note: If there are diffculties in installing xlrd package, please use the binary executable version of the tool in the ./binary_executable/dist folder  
+Note: If there are diffculties in installing the xlrd package, please use the provided binary executable version of the tool as the following: uncompress the file "binary_executable.rar", then run the the tool using ./binary_executable/dist/ERAMER.exe .  
 
---Running HGA Tool--
+--Running ERAMER Tool--
 Run the command: 
-python HGA.py [fasta file]
+python ERAMER.py [fasta file]
 Where fasta file contain the peptides/precursor sequences in fasta format 
+
+In case the binary executable version is used, then run the command:
+./binary_executable/dist/ERAMER.exe [fasta file]
 
 
 -Output formats--
 The output will be rows with the following column format:
-Peptide ID: The ID (fasta header) of the peptide
-
-Position of the N-terminus of precursor: The position, in the peptide, of the N-terminus of the expected Position of the N-terminus of precursor. 	 
-
+Peptide ID: The ID (fasta header) of the peptide.
+Position of the N-terminus of precursor: The position, in the peptide, of the N-terminus of the expected Position of the N-terminus of precursor. 
 Expected transported precursor (lengths 9-16): enumerating the expected 9-16 lengths of the precursors while the N-terminus is fixed.   
-
-Trimming score: prediction score of trimming by ERAP1 enzyme 
+Trimming score: prediction score of trimming by ERAP1 enzyme. 
 
 
 --Samples test--
-Running the following command where test.fasta is sample fasta file that is provided in the github package 
-python ERAMER.py test.fasta
+Running the following command given that "test.fasta" is sample fasta file that is provided in the github package: 
+python ERAMER.py test.fasta 
+
+or the following command in case the binary executable version is used:
+./binary_executable/dist/ERAMER.exe test.fasta
 
 will output the following:
 
