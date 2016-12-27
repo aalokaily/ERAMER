@@ -10,7 +10,7 @@ All_weights = defaultdict(float)
 
 if len(sys.argv) != 2:
     print "Please provide a fasta file"
-    exit()
+    sys.exit(1) 
 
 peptide_file =  sys.argv[1]
 
@@ -24,7 +24,12 @@ def check_has_lower(s):
     return flag
 
 def read_PWM(xls_file):
-    workbook = xlrd.open_workbook(xls_file)
+    try :
+        workbook = xlrd.open_workbook(xls_file)
+    except:
+        print "Please store the PWM.xlsx file in the script's directory"
+        sys.exit(1) 
+        
     ID = ""
     for length_peptide in [9, 10, 11, 12, 13, 14, 15, 16]:
         worksheet = workbook.sheet_by_name('Length ' + str(length_peptide))
