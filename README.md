@@ -12,7 +12,8 @@ xlrd package (https://pypi.python.org/pypi/xlrd)
 --Installation--
 The tool is built using python; there is no need for installation.
 PWM.xlsx must be stored in the same directory of the python script. 
-Note: To add the following: (If there are diffculties in installing xlrd package, please use the binary executable version of the tool in ./binary_tool  
+
+Note: If there are diffculties in installing xlrd package, please use the binary executable version of the tool in the ./binary_executable/dist folder  
 
 --Running HGA Tool--
 Run the command: 
