@@ -11,7 +11,7 @@ xlrd package (https://pypi.python.org/pypi/xlrd)
 
 --Installation--
 The tool is built using python; there is no need for installation.
-PWM.xlsx must be stored on the same directory of the python script
+PWM.xlsx must be stored in the same directory of the python script
 
 --Running HGA Tool--
 Run the command: 
@@ -21,8 +21,8 @@ Where fasta file contain the peptides/precursor sequences in fasta format
 
 -Output formats--
 The output will be rows with the following column format:
-Peptide ID	
-Position of 16-mers	 
+Peptide ID: The ID(fasta header) of the peptide 	
+Position of C-terminus: Assuming As the tool computes for each 16-mer the score 	 
 Expected transported peptide
 Specificity score
 
