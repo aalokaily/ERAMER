@@ -1,6 +1,6 @@
 
 ERAMER tool version 1.0
-This tool predictes the score for trimming a given peptide by ERAP1 enzyme.
+This tool predictes a score for trimming a given peptide by ERAP1 enzyme.
 
 --Software version--
 This is version 1.0.0.
