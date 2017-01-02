@@ -13,7 +13,7 @@ xlrd package at https://pypi.python.org/pypi/xlrd. Or, you may use the binary ex
 The tool is built using python; there is no need for installation.
 PWM.xlsx must be stored in the same directory of the python script. 
 
-Note: if there are diffculties in installing the xlrd package, please use the provided binary executable version of the tool as the following: uncompress the file "binary_executable.rar", then run the the tool using ./binary_executable/dist/ERAMER.exe .  
+Note: if there are diffculties in installing the xlrd package, please use the provided binary executable version of the tool as the following: uncompress the file "binary_executable.zip", then run the the tool using ./binary_executable/dist/ERAMER.exe .  
 
 --Running ERAMER Tool--
 Run the command: 
