@@ -23,7 +23,7 @@ Where fasta file contain the peptides/precursor sequences in fasta format
 In case the binary executable version is used, then run the command:
 ./binary_executable/dist/ERAMER.exe [fasta file]
 
-
+ 
 -Output formats--
 The output will be rows with the following column format:
 Peptide ID: The ID (fasta header) of the peptide.
