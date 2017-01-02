@@ -79,18 +79,19 @@ for line in fileinput.input(peptide_file):
 
     elif tmp[0] == ">" and d != 0:
         peptide_seq.upper()
-        for i in range(9, len(peptide_seq) ):
+        for i in range(8, len(peptide_seq) ):
             large = 0
-            print peptide_id, "\t", i , "\t",
+            print peptide_id, "\t", i+1 , "\t",
             for prec_length in [9, 10, 11, 12, 13, 14, 15, 16]:
-                mer = peptide_seq[(i-prec_length):i]
+                mer = peptide_seq[(i-prec_length + 1):i+1]
+
                 if len(mer)  == prec_length:
                  #   if large < compute_specificty(mer):
                   #      large = compute_specificty(mer)
                       print compute_specificty(mer), "\t",  #large #compute_specificty(mer)
                 else:
                       print "0\t",  #large #compute_specificty(mer)
-            print 
+            print
         peptide_id = tmp[1:]
         peptide_seq = ""
 
@@ -100,33 +101,18 @@ for line in fileinput.input(peptide_file):
 # process the last peptide
 
 peptide_seq.upper()
-for i in range(9, len(peptide_seq) ):
+for i in range(8, len(peptide_seq) ):
             large = 0
-            print peptide_id, "\t", i , "\t",
+            print peptide_id, "\t", i+1 , "\t",
             for prec_length in [9, 10, 11, 12, 13, 14, 15, 16]:
-                mer = peptide_seq[(i-prec_length):i]
+                mer = peptide_seq[(i-prec_length + 1):i+1]
+
                 if len(mer)  == prec_length:
                  #   if large < compute_specificty(mer):
                   #      large = compute_specificty(mer)
                       print compute_specificty(mer), "\t",  #large #compute_specificty(mer)
                 else:
                       print "0\t",  #large #compute_specificty(mer)
-            print 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            print
 
 
