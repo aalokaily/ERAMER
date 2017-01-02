@@ -1,0 +1,470 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+	<title>ERAMER Tool</title>
+	<SCRIPT LANGUAGE="JavaScript">
+
+
+sequence_weights9 = new Array (0.766 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.1 , 0.727 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.22 , 0.46 , 0.042 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.299 , 0.028 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.256 , 0.562 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.05 , 0.063 , 0.46 , 0.012 , 0.46 , 0.46 , 0.05 , 0.46 , 0.46 , 0.427 , 0.127 , 0.46 , 0.52 , 0.14 , 0.05 , 0.22 , 0.46 , 0.11 , 0.449 , 0.07 , 0.46 , 0.42 , 0.05 , 0.46 , 0.32 , 0.46 , 0.09 , 0.235 , 0.113 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.094 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.92 , 0.92 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791 , 0.176 , 0.46 , 0.3 , 0.23 , 0.18 , 0.19 , 0.11 , 0.46 , 0.021 , 0.656 , 0.92 , 0.6 , 0.14 , 0.05 , 0.75 , 0.46 , 0.16 , 0.706 , 0.357 , 0.14 , 0.19 , 0.32 , 0.23 , 0.68 , 0.46 , 0.05 , 0.641 , 0.063 , 0.46 , 0.22 , 0.05 , 0.05 , 0.37 , 0.46 , 0.055 , 0.385 , 0.141 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.513 , 0.084 , 0.46 , 0.3 , 0.06 , 0.46 , 0.32 , 0.46 , 0.11 , 0.449 , 0.213 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.556 , 0.318 , 0.22 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.663 , 0.127 , 0.32 , 0.3 , 0.23 , 0.05 , 0.46 , 0.46 , 0.09 , 0.791);
+sequence_weights10 = new Array (0.766 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.727 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.92 , 0.0 , 0.92 , 0.042 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.299 , 0.028 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.256 , 0.562 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.05 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.427 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.235 , 0.113 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.094 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.92 , 0.92 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791 , 0.176 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.021 , 0.656 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.706 , 0.357 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.641 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.385 , 0.141 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.513 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.213 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.556 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.663 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791);
+sequence_weights11 = new Array (0.766 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.727 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.92 , 0.92 , 0.042 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.299 , 0.028 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.256 , 0.562 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.05 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.427 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.235 , 0.113 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.094 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.92 , 0.92 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791 , 0.176 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.021 , 0.656 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.706 , 0.357 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.641 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.385 , 0.141 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.513 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.213 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.556 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.663 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791);
+sequence_weights12 = new Array (0.766 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.727 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.92 , 0.92 , 0.92 , 0.042 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.299 , 0.028 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.256 , 0.562 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.05 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.427 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.235 , 0.113 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.46 , 0.094 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.92 , 0.92 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791 , 0.176 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.46 , 0.021 , 0.656 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.706 , 0.357 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.641 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.385 , 0.141 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.513 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.213 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.556 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.663 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791);
+sequence_weights13 = new Array (0.766 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.727 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.92 , 0.92 , 0.92 , 0.042 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.299 , 0.028 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.256 , 0.562 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.05 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.427 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.235 , 0.113 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.46 , 0.46 , 0.094 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.92 , 0.92 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791 , 0.176 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.46 , 0.46 , 0.021 , 0.656 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.706 , 0.357 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.641 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.385 , 0.141 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.513 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.213 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.556 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.663 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791);
+sequence_weights14 = new Array (0.766 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.727 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.92 , 0.92 , 0.92 , 0.042 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.299 , 0.028 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.256 , 0.562 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.05 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.427 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.235 , 0.113 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.094 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.92 , 0.92 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791 , 0.176 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.021 , 0.656 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.706 , 0.357 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.641 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.385 , 0.141 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.513 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.213 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.556 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.663 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791);
+sequence_weights15 = new Array (0.766 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.727 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.46 , 0.92 , 0.92 , 0.92 , 0.042 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.299 , 0.028 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.256 , 0.562 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.05 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.427 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.235 , 0.113 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.094 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.92 , 0.92 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791 , 0.176 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.021 , 0.656 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.706 , 0.357 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.641 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.385 , 0.141 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.513 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.213 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.556 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.663 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791);
+sequence_weights16 = new Array (0.766 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.727 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.46 , 0.46 , 0.92 , 0.92 , 0.92 , 0.042 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.299 , 0.028 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.256 , 0.562 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.05 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.427 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.07 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.235 , 0.113 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.094 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.92 , 0.92 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791 , 0.176 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.0 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.021 , 0.656 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.706 , 0.357 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.641 , 0.063 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.385 , 0.141 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.513 , 0.084 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.449 , 0.213 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.556 , 0.318 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.663 , 0.127 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.46 , 0.791);
+
+length_weight = new Array (0.02, 0.04, 0.06, 0.08, 0.08, 0.06, 0.04, 0.02);
+
+var intValid = 1 ;
+var intCharPos = 0 ;
+
+
+function get_row_num_aa(aa) {
+var row_num;
+
+switch (aa.toUpperCase() ) {
+
+case "A":
+	row_num = 1;
+	break;
+case "R":
+	row_num = 2;
+	break;
+case "N":
+	row_num = 3;
+	break;
+case "D":
+	row_num = 4;
+	break;
+case "C":
+	row_num = 5;
+	break;
+case "E":
+	row_num = 6;
+	break;
+case "Q":
+	row_num = 7;
+	break;
+case "G":
+	row_num = 8;
+	break;
+case "H":
+	row_num = 9;
+	break;
+case "I":
+	row_num = 10;
+	break;
+case "L":
+	row_num = 11;
+	break;
+case "K":
+	row_num = 12;
+	break;
+case "M":
+	row_num = 13;
+	break;
+case "F":
+	row_num = 14;
+	break;
+case "P":
+	row_num = 15;
+	break;
+case "S":
+	row_num = 16;
+	break;
+case "T":
+	row_num = 17;
+	break;
+case "W":
+	row_num = 18;
+	break;
+case "Y":
+	row_num = 19;
+	break;
+case "V":
+	row_num = 20;
+	break;
+default: 
+	row_num = -1;
+
+}
+return row_num;
+}
+
+function Compute_Spec(peptide){
+length_peptide = peptide.length
+
+var row_num_aa = -1
+var spec = 0
+
+if (length_peptide == 9){
+   for (i = 1; i <= length_peptide; i++) {
+   	   row_num_aa = get_row_num_aa(peptide.charAt(i-1))
+	   spec += sequence_weights9[((row_num_aa - 1) * length_peptide + i) - 1];
+   }
+   
+   return (spec/length_peptide) + length_weight[length_peptide-9];       
+}  
+
+if (length_peptide == 10){
+   for (i = 1; i <= length_peptide; i++) {
+   	   row_num_aa = get_row_num_aa(peptide.charAt(i-1))
+	   spec += sequence_weights10[((row_num_aa - 1) * length_peptide + i) - 1];
+   }
+   
+   return (spec/length_peptide) + length_weight[length_peptide-9];       
+}  
+
+if (length_peptide == 11){
+   for (i = 1; i <= length_peptide; i++) {
+   	   row_num_aa = get_row_num_aa(peptide.charAt(i-1))
+	   spec += sequence_weights11[((row_num_aa - 1) * length_peptide + i) - 1];
+   }
+   
+   return (spec/length_peptide) + length_weight[length_peptide-9];       
+}  
+
+if (length_peptide == 12){
+   for (i = 1; i <= length_peptide; i++) {
+   	   row_num_aa = get_row_num_aa(peptide.charAt(i-1))
+	   spec += sequence_weights12[((row_num_aa - 1) * length_peptide + i) - 1];
+   }
+   
+   return (spec/length_peptide) + length_weight[length_peptide-9];       
+}  
+
+if (length_peptide == 13){
+   for (i = 1; i <= length_peptide; i++) {
+   	   row_num_aa = get_row_num_aa(peptide.charAt(i-1))
+	   spec += sequence_weights13[((row_num_aa - 1) * length_peptide + i) - 1];
+   }
+   
+   return (spec/length_peptide) + length_weight[length_peptide-9];       
+}  
+
+if (length_peptide == 14){
+   for (i = 1; i <= length_peptide; i++) {
+   	   row_num_aa = get_row_num_aa(peptide.charAt(i-1))
+	   spec += sequence_weights14[((row_num_aa - 1) * length_peptide + i) - 1];
+   }
+   
+   return (spec/length_peptide) + length_weight[length_peptide-9];       
+}  
+
+if (length_peptide == 15){
+   for (i = 1; i <= length_peptide; i++) {
+   	   row_num_aa = get_row_num_aa(peptide.charAt(i-1))
+	   spec += sequence_weights15[((row_num_aa - 1) * length_peptide + i) - 1];
+   }
+   
+   return (spec/length_peptide) + length_weight[length_peptide-9];       
+}  
+
+if (length_peptide == 16){
+   for (i = 1; i <= length_peptide; i++) {
+   	   row_num_aa = get_row_num_aa(peptide.charAt(i-1))
+	   spec += sequence_weights16[((row_num_aa - 1) * length_peptide + i) - 1];
+   }
+   
+   return (spec/length_peptide) + length_weight[length_peptide-9];       
+}    
+}
+
+
+
+
+function fnTestString (strOriginalString){
+
+intCharPos = 0;
+
+while (intValid==1&&intCharPos <= strOriginalString.length - 1)
+{
+	switch ( strOriginalString.charAt(intCharPos) ) {
+		case "A":
+			break;
+		case "C":
+			break;
+		case "D":
+			break;
+		case "E":
+			break;
+		case "F":
+			break;
+		case "G":
+			break;
+		case "H":
+			break;
+		case "I":
+			break;
+		case "K":
+			break;
+		case "L":
+			break;
+		case "M":
+			break;
+		case "N":
+			break;
+		case "P":
+			break;
+		case "Q":
+			break;
+		case "R":
+			break;
+		case "S":
+			break;
+		case "T":
+			break;
+		case "V":
+			break;
+		case "W":
+			break;
+		case "Y":
+			break;
+		default: 
+			intValid = 0;
+	}
+intCharPos++;
+}
+         
+}
+
+function round(value, decimals) {
+  return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+}
+
+
+function readText(that){
+
+			if(that.files && that.files[0]){
+				var reader = new FileReader();
+				reader.onload = function (e) {  
+					var output=e.target.result;
+				
+					//process text to show only lines with "@":				
+					document.getElementById("main_text").value = output;
+					
+					
+				};//end onload()
+				reader.readAsText(that.files[0]);
+			}//end if html5 filelist support
+			
+		}
+
+
+  
+  
+  
+  
+function GetValue( inputstring) {
+
+
+
+	var temp
+	var peptides = inputstring.split('>');	
+	for(var l = 1; l < peptides.length ;l++){
+	peptide = peptides[l].split('\n');
+	
+	temp = ""
+	id = peptide[0];
+	for (var j = 1; j < peptide.length ;j++){
+	temp += peptide[j]
+	}
+	
+	var strInputString = temp.toUpperCase() ;
+	var ss= / /g;	
+	strInputString = strInputString.replace(ss, '');
+	if (strInputString.length < 9 ){
+	alert ('Sequence of peptide ID: ' + id + ' is not a 9 mer or more');
+	return;
+	}
+	else 
+	{
+		fnTestString(strInputString) ;
+		
+		if ( intValid == 0 ) {
+			intValid  = 1;
+			alert ('Invalid String... \nONLY accepts amino acidic sequence,\nyour input may contain B J O U X Z or ! @ # $ % ^ & * ( ) , numbers, line break or other special characters, \nplease check your input at peptide ID: ' + id);
+			return;
+				   			}
+	}
+	
+	
+	}
+	
+	document.write('<B><font size="5">Prediction Results</font></B>')
+	document.write('<br>');
+	document.write('<br>');
+	document.write('<B>*For descriptions of the columns, please see <A HREF = "https://raw.githubusercontent.com/aalokaily/ERAMER/master/README.md" target="newwindow" 1>Manual</A></B>');
+	document.write('<br>');
+	document.write('<br>');
+	document.write('<table border = 1>');
+	document.write('<tr>');
+	document.write('<td>Peptide ID</td>');
+	document.write('<td>Position of the C-terminus of precursor</td>');
+	document.write('<td>Trimming score, LETP = 9</td>');
+	document.write('<td>Trimming score, LETP = 10</td>');
+	document.write('<td>Trimming score, LETP = 11</td>');
+	document.write('<td>Trimming score, LETP = 12</td>');
+	document.write('<td>Trimming score, LETP = 13</td>');
+	document.write('<td>Trimming score, LETP = 14</td>');
+	document.write('<td>Trimming score, LETP = 15</td>');
+	document.write('<td>Trimming score, LETP = 16</td>');
+	document.write('</tr>');
+	
+	var temp
+	var peptides = inputstring.split('>');	
+	for(var l = 1; l < peptides.length ;l++){
+	peptide = peptides[l].split('\n');
+	
+	temp = ""
+	id = peptide[0];
+	for (var j = 1; j < peptide.length ;j++){
+	temp += peptide[j]
+	}
+			
+	
+	var strInputString = temp.toUpperCase() ;
+	var ss= / /g;	
+	strInputString = strInputString.replace(ss, '');
+	var i, j, temp,  spec9, spec10, spec11, spec12, spec13, spec14, spec15, spec16  ;
+			
+			j = strInputString.length ;
+		
+		
+			for (i = 8; i < j ; i++) {
+		
+			temp = strInputString.substr(i-8, 9);
+			if (temp.length == 9){
+			   spec9 = Compute_Spec(temp);
+			}
+			else{
+				spec9 = 0; 
+			}
+			
+			temp = strInputString.substr(i-9, 10);
+			if (temp.length == 10){
+			   spec10 = Compute_Spec(temp);
+			}
+			else{
+				spec10 = 0; 
+			}
+			
+			temp = strInputString.substr(i-10, 11);
+			if (temp.length == 11){
+			   spec11 = Compute_Spec(temp);
+			}
+			else{
+				spec11 = 0; 
+			}
+			
+			temp = strInputString.substr(i-11, 12);
+			if (temp.length == 12){
+			   spec12 = Compute_Spec(temp);
+			}
+			else
+			{
+				spec12 = 0; 
+			}
+			
+			temp = strInputString.substr(i-12, 13);
+			if (temp.length == 13){
+			   spec13 = Compute_Spec(temp);
+			}
+			else{
+				spec13 = 0; 
+			}
+			
+			temp = strInputString.substr(i-13, 14);
+			if (temp.length == 14){
+			   spec14 = Compute_Spec(temp);
+			}
+			else{
+				spec14 = 0; 
+			}
+			
+			temp = strInputString.substr(i-14, 15);
+			if (temp.length == 15){
+			   spec15 = Compute_Spec(temp);
+			}
+			else{
+				spec15 = 0; 
+			}
+			
+			temp = strInputString.substr(i-15, 16);
+			if (temp.length == 16){
+			   spec16 = Compute_Spec(temp);
+			}
+			else{
+				spec16 = 0; 
+			}
+			
+			
+			   
+				
+			
+			
+			document.write('<tr><td>'+ id + '</td><td>' + Number(i+1) + '</td><td>' + round(spec9, 6) + '</td><td>' + round(spec10, 6) + '</td><td>' +  round(spec11, 6) + '</td><td>' +  round(spec12, 6) + '</td><td>' +  round(spec13, 6) + '</td><td>' +  round(spec14, 6) + '</td><td>' +  round(spec15, 6) + '</td><td>' +  round(spec16, 6)  +  '</td></tr>');
+	}
+		
+			
+	}	
+	
+	document.write('</table>');
+}
+
+
+  
+</SCRIPT>
+</head>
+<body bgcolor="#f7f7f9">
+<form name="form1" pbzloc="0"><br />
+<b><font size="5">ERAMER: A Tool for the Prediction of ERAP1 Trimming </font></b><br />
+<b>The tool predictes a score for trimming a given peptide/s by ERAP1 enzyme.</b><br />
+<img alt="" height="330" src="ERAP1.jpg" style="position: absolute; left: 625px; top: 140px" width="480" /> 
+<img alt="" height="335" pbzloc="2" src="Binding.jpg" style="position: absolute; left: 625px; top: 580px" width="480" />
+<p><br />
+<br />
+<b>Input peptides in fasta format (an example of fasta format is at <a href="https://raw.githubusercontent.com/aalokaily/ERAMER/master/test.fasta" target="newwindow">fasta format example </a>), or<br />
+upload a fasta file <input onchange="readText(this)" type="file" /> </b><br />
+<textarea cols="70" id="main_text" name="inputstring" rows="10" value=""></textarea><br />
+<input onclick="GetValue(inputstring.value)" type="button" value="Compute Prediction Scores" /></p>
+
+<p pbzloc="1"><br />
+<br />
+<br />
+&nbsp;</p>
+
+<p pbzloc="8"><br />
+&nbsp;<span pbzloc="3" style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Source: <a href="http://doi.org/10.1038/nrrheum.2015.41" target="newwindow">http://doi.org/10.1038/nrrheum.2015.41 </a></span><br />
+<b><font size="4">CITATIONS</font></b><br />
+<b>For publication of results, please cite: ......</b><br />
+<br />
+<br />
+<b><font size="4">PORTABLE VERSIONS</font></b><br />
+<b>A python stand-alone software package and also its binaries-excutable version are<br />
+available at <a href="https://github.com/aalokaily/ERAMER" target="newwindow">stand-alone version </a></b><br />
+<br />
+<br />
+<b><font size="4">CONTACTS</font></b><br />
+<b>For more queries or questions, please contact Anas Al-okaily, anas.al-okaily@uconn.edu</b><br />
+<br />
+<br />
+<b><font size="4">LAST UPDATE</font></b><br />
+<b>01/2017</b><br />
+&nbsp;</p>
+
+<p pbzloc="2">&nbsp;</p>
+
+<p pbzloc="3"><br />
+<br />
+&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 12px"><span>Source: <a href="https://dx.doi.org/10.1073%2Fpnas.0500721102" target="newwindow">http://doi.org/10.1073/pnas.0500721102</a></span></span></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</form>
+</body>
+</html>
