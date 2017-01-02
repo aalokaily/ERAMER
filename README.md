@@ -27,9 +27,8 @@ In case the binary executable version is used, then run the command:
 -Output formats--
 The output will be rows with the following column format:
 Peptide ID: The ID (fasta header) of the peptide.
-Position of the N-terminus of precursor: The position, in the peptide, of the N-terminus of the expected Position of the N-terminus of precursor. 
-Expected transported precursor (lengths 9-16): enumerating the expected 9-16 lengths of the precursors while the N-terminus is fixed.   
-Trimming score: prediction score of trimming by ERAP1 enzyme. 
+Position of the C-terminus of precursor: The position, in the peptide, of the C-terminus of the expected precursor. 
+Trimming score, LETP = x: Trimming score when the length of the expeced transpoted precursor (LETP) is x, where position x is the N-terminus position and position 1 is the fixed C-terminus position. 
 
 
 --Samples test--
