@@ -25,8 +25,6 @@ python ERAMER.py [fasta file]
 ```
 Where fasta file contain the peptides/precursor sequences in fasta format 
 
- 
-
 ----------------------------------Output formats--------------------------------
 
 
@@ -40,7 +38,9 @@ python ERAMER.py test.fasta
 ```
 
 will output the following:
+```
 
+```
 
 
 ----------------------------------Contacts----------------------------------
