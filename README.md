@@ -54,7 +54,7 @@ Peptide ID	Expected length of epitope	Average of scores	Trimming score of precur
 GGGGGVVVVVVAAAEE	8	0.085322875	0.082079	0.102341	0.098547	0.05217	0.060521	0.069076	0.085425	0.132424
 GGGGGVVVVVVAAAEE	9	0.0785941428571	0.082079	0.102341	0.098547	0.05217	0.060521	0.069076	0.085425
 GGGGGVVVVVVAAAEE	10	0.0774556666667	0.082079	0.102341	0.098547	0.05217	0.060521	0.069076
-peptide2 length is not within this length range. The length of precursor that typically processed by ERAP1 enzyme is 9-16 in length
+peptide2 length is not within length range. The length of precursor that typically processed by ERAP1 enzyme is 9-16 in length
 GGGGGVVVVVV	8	0.0386456666667	0.025999	0.050784	0.039154
 GGGGGVVVVVV	9	0.0383915	0.025999	0.050784
 GGGGGVVVVVV	10	0.025999	0.025999
