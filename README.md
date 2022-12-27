@@ -4,6 +4,7 @@ This tool predictes a score for trimming a given peptide by ERAP1 enzyme.
 
 
 ----------------------------------Software version ----------------------------------
+
 Version 1.0.0.
 
 ----------------------------------Prerequisite----------------------------------
@@ -11,6 +12,7 @@ Version 1.0.0.
 - xlrd package at https://pypi.python.org/pypi/xlrd.
 
 ----------------------------------Installation----------------------------------
+
 The tool is built using python; there is no need for installation.
 PWM.xlsx must be stored in the same directory of the python script. 
 
