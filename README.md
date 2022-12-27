@@ -14,7 +14,8 @@ Version 1.0.0.
 ----------------------------------Installation----------------------------------
 
 The tool is built using python; there is no need for installation.
-PWM.xlsx must be stored in the same directory of the python script. 
+
+PWM.xlsx must be stored in the same directory of the python script (the tables in the PWM.xlsx file were not embeded inside the python script so that the PWMs can be modified more easily in future). 
 
 
 ----------------------------------Running ERAMER Tool---------------------------
