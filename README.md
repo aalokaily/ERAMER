@@ -16,7 +16,6 @@ Version 1.0.0.
 The tool is built using python; there is no need for installation.
 PWM.xlsx must be stored in the same directory of the python script. 
 
-Note: if there are diffculties in installing the xlrd package, please use the provided binary executable version of the tool as the following: uncompress the file "Binary_version/binary_executable.zip", then run the the tool using ./dist/ERAMER.exe file.  
 
 ----------------------------------Running ERAMER Tool---------------------------
 
