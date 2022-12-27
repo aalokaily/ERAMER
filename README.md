@@ -27,7 +27,9 @@ python ERAMER.py [fasta file]
 Where fasta file contain the peptides/precursor sequences in fasta format 
 
 ----------------------------------Output formats--------------------------------
+
 The following columns will be outputted:
+```
 Precursor ID
 Precursor sequence
 Expected length of epitope	
@@ -40,7 +42,7 @@ Trimming score of precursor 12
 Trimming score of precursor 11	
 Trimming score of precursor 10	
 Trimming score of precursor 9
-
+```
 
 ----------------------------------Samples test---------------------------------
 
