@@ -26,7 +26,7 @@ python ERAMER.py [fasta file]
 ```
 Where fasta file contain the peptides/precursor sequences in fasta format. 
 
-For the validation process or in case epitope is known, please provide the epitope next to the precursor seperated by tab. This is need in order to compute the specificty as the average value of the specicifty in PWM of amino acids from position 0 to position L - Y - 1 in the precursor where position 0 is the amino acid at the N terminus of the precursor, L is the length of the precursor, and Y is the length of epitope next to the precursor.      
+For validation process (was performed in the paper) or in case epitope/s are known, please add to the fasta file the epitopes to be next to the precursor seperated by tab. This is need in order to compute the specificty as the average value of the specicifty in PWM of amino acids from position 0 to position L - Y - 1 in the precursor where position 0 is the amino acid at the N terminus of the precursor, L is the length of the precursor, and Y is the length of epitope next to the precursor.      
 
 ----------------------------------Output formats--------------------------------
 
