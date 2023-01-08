@@ -1,7 +1,6 @@
 
 # ERAMER tool
-This tool predictes a score for trimming a given peptide by ERAP1 enzyme.
-
+This tool predicts a score for trimming a given peptide by ERAP1 enzyme. The score can be in range from -1 to 1, where 1 indicates high possibility for trimming by ERAP1 enzyme and -1 indicates the opposite. 
 
 ----------------------------------Software version ----------------------------------
 
@@ -15,7 +14,7 @@ Version 1.0.0.
 
 The tool is built using python; there is no need for installation.
 
-PWM.xlsx must be stored in the same directory of the python script (the tables in the PWM.xlsx file were not embeded inside the python script so that the PWMs can be modified more easily in future). 
+PWM.xlsx must be stored in the same directory of the python script (the tables in the PWM.xlsx file were not embedded inside the python script so that the PWMs can be modified more easily in future). 
 
 
 ----------------------------------Running ERAMER Tool---------------------------
@@ -25,8 +24,6 @@ Run the command:
 python ERAMER.py [fasta file]
 ```
 Where fasta file contain the peptides/precursor sequences in fasta format. 
-
-For validation process (was performed in the paper) or in case epitope/s are known, please add to the fasta file the epitopes to be next to the precursor seperated by tab. This is need in order to compute the specificty as the average value of the specicifty in PWM of amino acids from position 0 to position L - Y - 1 in the precursor where position 0 is the amino acid at the N terminus of the precursor, L is the length of the precursor, and Y is the length of epitope next to the precursor.      
 
 ----------------------------------Output formats--------------------------------
 
@@ -70,6 +67,7 @@ peptide5	LLLLLLLLLLLAAAAA	9	0.274604571429	0.302437	0.297252	0.291327	0.282246	0
 peptide5	LLLLLLLLLLLAAAAA	10	0.2806535	0.302437	0.297252	0.291327	0.282246	0.259116	0.251543
 ```
 
+Note that for each precursor, the tool will compute the specificity for each expected epitope length 8, 9, and 10. For validation process (which was performed in the paper) or in case epitope/s are known, add (in the fasta file) each epitope associated with a precursor and place it next to the precursor separated by tab (\t). Then, for each precursor the specificity will be computed where the expected epitope-length is the length of the given epitope (not 8, 9, and 10). This specificity therefore will be average value of the specificity in PWM of amino acids from position 0 to position L - Y - 1 in the precursor where position 0 is the amino acid at the N terminus of the precursor, L is the length of the precursor, and Y is the length of epitope next to the precursor.
 
 ----------------------------------Contacts----------------------------------
 
