@@ -72,7 +72,7 @@ Note that for each precursor, the tool will compute the specificity for each exp
 ----------------------------------Contacts----------------------------------
 
 For more queries or questions, please contact
-Anas Al-okaily, anas.al-okaily@uconn.edu
+Anas Al-okaily, anas.alokaily.uconn@gmail.com
 
 
 Last update: 01/2023
